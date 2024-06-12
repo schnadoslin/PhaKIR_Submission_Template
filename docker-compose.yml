@@ -1,0 +1,33 @@
+version: '3'
+services:
+  phakir_runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    shm_size: 2G
+    network_mode: none
+
+    deploy:
+      resources:
+        limits:
+          memory: 32G
+        reservations:
+          devices:
+          - capabilities: [gpu]
+    volumes:
+      - input_data:/phakir/inputs/
+      - output_data:/phakir/outputs/
+
+volumes:
+  input_data:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./inputs
+  output_data:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./outputs
