@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    shm_size: 2G
+    shm_size: 40G
     network_mode: none
 
     deploy:
