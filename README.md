@@ -3,7 +3,7 @@
 
 Welcome to the submission and evaluation instructions for our [PhaKIR - Challenge: **Pha**se, **K**eypoint and **I**nstrument **R**ecognition](https://phakir.re-mic.de/)! In this challenge, you are required to provide a Docker image. The resulting container processes data from an input directory and writes the results to an output directory. We have provided a `docker-compose.yml` file to simulate the evaluation environment and test resource limitations.
 
-You can use this repository as an evaluation template for all three [PhaKIR-Tasks.](https://phakir.re-mic.de/tasks/)
+You can use this repository as an evaluation template for all three [PhaKIR-Tasks:](https://phakir.re-mic.de/tasks/)
 
 - Surgical Procedure Phase Recognition
 - Surgical Instrument Keypoint Estimation
