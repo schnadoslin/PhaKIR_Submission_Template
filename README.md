@@ -82,13 +82,13 @@ In the following, the structure of the data as well as the desired output format
 
 ### Structure
 
-The data for this challenge is organized in a specific manner, please note the [Data Descriptions and Labeling Instructions](https://phakir.re-mic.de/wp-content/uploads/2024/07/PhaKIR_Data_Description_and_Labeling_Instructions_v2.pdf). You will find the data mounted in the `input_data` directory. The results of your processing should be written to the `output_data` directory.
+The data for this challenge is organized in a specific manner, please note the [Data Descriptions and Labeling Instructions](https://phakir.re-mic.de/wp-content/uploads/2024/07/PhaKIR_Data_Description_and_Labeling_Instructions_v2.pdf). You will find the data mounted in the `inputs` directory. The results of your processing should be written to the `outputs` directory.
 
 In the **submission phase**, the video data is already split into frames and available in the `/Frames` directory. In addition, the video cuts are provided.
 The data is organized as follows:
 
 ```bash
-input_data
+inputs
 │
 ├─── Video_01
 │    ├─── Frames
@@ -105,13 +105,13 @@ input_data
 │    └─── Video_02_Cuts.csv
 ```
 
-You have to process each video in the `input_data/data` directory and write the results to the `output_data` directory. The results have to meet the requirements of the specific task.
+You have to process each video in the `inputs/data` directory and write the results to the `outputs` directory. The results have to meet the requirements of the specific task.
 
 ### Outputs
 
 Whether you participate in one, two or all tasks, you have to ensure, that your results are written in the output directory in the correct structure.
 The output structure for each task is provided below.
-For example, if you participate in the two tasks Surgical Procedure Phase Recognition and Surgical Instrument Keypoint Estimation, make sure that for Video `XX`, both files `Video_XX_Phases.csv` and `Video_XX_Keypoints.json` are available in the `output_data` directory. **Note:** The format of your results must be identical to the format of the ground truth of the training data provided.
+For example, if you participate in the two tasks Surgical Procedure Phase Recognition and Surgical Instrument Keypoint Estimation, make sure that for Video `XX`, both files `Video_XX_Phases.csv` and `Video_XX_Keypoints.json` are available in the `outputs` directory. **Note:** The format of your results must be identical to the format of the ground truth of the training data provided.
 
 #### Surgical Procedure Phase Recognition
 
@@ -120,7 +120,7 @@ Details can be found in the [Data Description and Labeling Instructions](https:/
 Compare the format of your results with the format of the provided ground truth from the training data.
 
 ```bash
-output_data
+outputs
 │
 ├─── Video_01
 │    └─── Video_01_Phases.csv
@@ -136,7 +136,7 @@ Details can be found in the [Data Description and Labeling Instructions](https:/
 Compare the format of your results with the format of the provided ground truth from the training data.
 
 ```bash
-output_data
+outputs
 │
 ├─── Video_01
 │    └─── Video_01_Keypoints.json
@@ -152,7 +152,7 @@ Details can be found in the [Data Description and Labeling Instructions](https:/
 Compare the format of your results with the format of the provided ground truth from the training data.
 
 ```bash
-output_data
+outputs
 │
 ├───Video_01
 │   └─── Video_01_Masks
@@ -181,7 +181,7 @@ output_data
 
 ## Docker
 
-You are required to provide a Docker image for submission. A container created out of this image is used to process the provided data. Your Docker container should be configured to read data from the `input_data` directory and write the results to the `output_data` directory.
+You are required to provide a Docker image for submission. A container created out of this image is used to process the provided data. Your Docker container should be configured to read data from the `inputs` directory and write the results to the `outputs` directory.
 
 ### Image
 
@@ -202,7 +202,7 @@ The constraints are as follows:
 
 As the training process is performed locally at your research facilities, you are free to use whatever you like to train the models. You are only required to use the provided `docker-compose.yml` file with the given restrictions to verify that your submission is conformant to the PhaKIR Challenge environment.
 
-Note that the container must be able to process the data without any further input. The container must be able to process the data from the `input_data` directory and write the results to the `output_data` directory.
+Note that the container must be able to process the data without any further input. The container must be able to process the data from the `inputs` directory and write the results to the `outputs` directory.
 
 For testing just use the following command:
 
@@ -221,7 +221,7 @@ A description of the submission formalities etc. will be published **soon**.
 Check the Website of our [PhaKIR - Challenge: **Pha**se, **K**eypoint and **I**nstrument **R**ecognition](https://phakir.re-mic.de/) for new updates.
 
 You can create your Docker Image using the provided `Dockerfile` or by providing a pre-built image. 
-Make sure your Docker container is properly configured to read from the `input_data` directory and write to the `output_data` directory.
+Make sure your Docker container is properly configured to read from the `inputs` directory and write to the `outputs` directory.
 
 ## Evaluation
 
