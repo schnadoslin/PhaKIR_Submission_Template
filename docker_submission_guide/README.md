@@ -22,13 +22,13 @@ The [PhaKIR Challenge](https://phakir.re-mic.de/) aims to advance the field of s
    ```
 
    | :zap:        Note: Paste the generated token when prompted for a password.
-|-----------------------------------------|
+   |-----------------------------------------|
 
 5. **Building and Tagging a Docker Image**  
     - Proper tagging of the image is crucial:
 
       | :zap:        Note: For the following command, only use lowercase letters, including for your username or teamname.
-|-----------------------------------------|
+      |-----------------------------------------|
 
       - Use specific tags such as `phase_recognition`, `keypoint_estimation`, or `instrument_segmentation` based on your task.
    - Build your Docker image with the command:  
