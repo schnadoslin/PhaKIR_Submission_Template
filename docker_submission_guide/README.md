@@ -14,7 +14,11 @@ The [PhaKIR Challenge](https://phakir.re-mic.de/) aims to advance the field of s
 3. **Generating an Access Token**  
    Navigate to [your settings](https://phakir-submission.re-mic.de/user/settings/applications) and generate an access token (under Settings -> Applications) with `package:read&write` permissions. This token will be required for Docker login.
 
-4. **Docker Login**  
+4. **Docker Login**
+
+   | :zap:        Note: For the following commands, only use lowercase letters, including for your username or teamname.
+   |-----------------------------------------|
+
    Open your command line and log in to the PhaKIR Docker registry using the following command:
 
    ```bash
@@ -24,12 +28,8 @@ The [PhaKIR Challenge](https://phakir.re-mic.de/) aims to advance the field of s
    | :zap:        Note: Paste the generated token when prompted for a password.
    |-----------------------------------------|
 
-5. **Building and Tagging a Docker Image**  
+6. **Building and Tagging a Docker Image**  
     - Proper tagging of the image is crucial:
-
-      | :zap:        Note: For the following command, only use lowercase letters, including for your username or teamname.
-      |-----------------------------------------|
-
       - Use specific tags such as `phase_recognition`, `keypoint_estimation`, or `instrument_segmentation` based on your task.
    - Build your Docker image with the command:  
      ```bash
@@ -40,7 +40,7 @@ The [PhaKIR Challenge](https://phakir.re-mic.de/) aims to advance the field of s
      docker tag {local_image}:{your_tag} phakir-submission.re-mic.de/{YOUR_PHAKIR_USERNAME}/{YOUR_PHAKIR_USERNAME_OR_TEAMNAME}:{task_tag}
      ```
 
-6. **Uploading the Image**  
+7. **Uploading the Image**  
    Push the Docker image to the PhaKIR registry using:  
    ```bash
    docker push phakir-submission.re-mic.de/{YOUR_PHAKIR_USERNAME}/{YOUR_PHAKIR_USERNAME_OR_TEAMNAME}:{task_tag}
