@@ -217,11 +217,10 @@ You may only submit **one** Docker image. If you wish to participate in multiple
 
 ## Submission
 
-A description of the submission formalities etc. will be published **soon**.
-Check the Website of our [PhaKIR - Challenge: **Pha**se, **K**eypoint and **I**nstrument **R**ecognition](https://phakir.re-mic.de/) for new updates.
-
 You can create your Docker Image using the provided `Dockerfile` or by providing a pre-built image. 
 Make sure your Docker container is properly configured to read from the `inputs` directory and write to the `outputs` directory.
+
+Check the participation part of the PhaKIR website (https://phakir.re-mic.de/participation) for further details.
 
 ## Evaluation
 
